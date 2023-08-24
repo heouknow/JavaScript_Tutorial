@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="23.08.24 ex3_11" content="width=device-width, initial-scale=1.0">
+        <title>23.08.24 ex3_11</title>
+    </head>
+    
+    <body>
+    
+        <script>
+          /*  77p
+          ---do while---
+           while(조건식){
+            조건식이 참이면 반복하며 실행
+           }
+
+
+           do{
+            반복하며 실행 // 최초 실행 
+           }while(조건식);// 조건식이 참이면 do로 이동
+
+          */
+          var sum = 0; 
+          do{
+                var n = Number(prompt('0을 입력하면 반복 종료'));
+                sum += n;
+                //document.write(n+"<br>");
+
+           }while(n);
+           document.write(sum);
+
+           // 77p example
+           var i = 10;
+           do{
+            document.write("hello!");
+           }while(i<3)
+        </script>
+
+    </body>
+
+</html>

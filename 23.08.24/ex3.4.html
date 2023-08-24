@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="23.08.24 ex3_4" content="width=device-width, initial-scale=1.0">
+        <title>3.08.24 ex3_4</title>
+    </head>
+    
+    <body>
+    
+        <script>
+            //page : 58p 01 문제
+            /* 진영이의 하루 지출 내역은 교통비 3000원, 식비 6000원, 음료는 3000원 입니다.
+            삼향 조건 연산자를 사용하여 하루 적정 지출 비용인 1만 원을 초과했을 경우에는 "000원 초과"
+            라고 출력하고, 아닐 경우에는 "돈 관리 잘 했어요!"라고 출력하세요
+            
+            ----------삼향 조건 연산자----------
+            조건식 ? 자바스크립트 코드 1 : 자바스크립트 코드2;
+            ex) var result = a > b?"javascript":"hello";
+            
+            */
+            var price1 = prompt("교통비 :");
+            var a = Number(price1);
+            var price2 = prompt("식비 :");
+            var b = Number(price2);
+            var price3 = prompt("음료 :");
+            var c = Number(price3);
+            var price_sum = a + b + c;
+            
+
+            var sum = price_sum > 10000?(price_sum-10000)+"원 초과" : "돈 관리 잘 했어요"
+            document.write(a);
+            document.write("<br>");
+            document.write(b);
+            document.write("<br>");
+            document.write(c);
+            document.write("<br>");
+            document.write(sum);
+
+            //page : 58p 02 문제
+            /*
+            다음 연산자를 이용하여 평균 판매량을 구하고 , 
+            4분기 판매량을 입력하여 평균 판매량의 이상/ 미달 값을 출력하세요. 
+            
+            ----------------------------------------------------------------------------------------------------------
+            질의읍답 창을 이용하여 4분 기 판매량을 입력하고, 전 분기 평균 판매량보다 판매량이 높거나 같을 경우에는 
+            '판매량이 평균 이상입니다.'라고 출력하고, 낮을 경우에는 '판매량이 평균 미달입니다.'라고 화면에 출력하세요.
+
+            분기별 판매량
+
+                            판매량
+                1분기       1,200
+                2분기       1,300
+                3분기       1,000
+            ----------------------------------------------------------------------------------------------------------
+            */
+
+        </script>
+
+    </body>
+
+</html>

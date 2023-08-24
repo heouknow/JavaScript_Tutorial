@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="23.08.24 ex3_10" content="width=device-width, initial-scale=1.0">
+        <title>23.08.24 ex3_10</title>
+        
+        <!--      전통적인 방법
+          <link rel ="stylesheet" href ="css/example.css">
+        -->
+      </head>
+    
+    <body>
+        <style>
+          @import url(css/example.css);
+          /*느림*/
+          .blue{color : green;}
+          .red{color : purple;}
+          #num17{ color: yellow}
+        </style>
+        <script>
+          //page 76
+          var i = 20;
+          while(i >= 10){
+            // if(i%2 == 0)
+            // {
+            //   document.write("<p class='blue'>"+ i +"</p>");
+            // }
+            // else
+            // {
+            //   document.write("<p class='red'>"+ i +"</p>");
+            // }
+            if(i==17){
+              document.write("<p id = 'num17'>"+i+"</p>");
+            }
+            else{
+              if(i%2 == 0)
+            {
+              document.write("<p class='blue' style = 'color:blue'>"+ i +"</p>");
+              //document.write("<p class='blue'>"+ i +"</p>");
+            }
+            else
+            {
+              document.write("<p class='red'>"+ i +"</p>");
+            }
+            }
+            i--;
+            // .blue{color : #00f;}
+            // .red{color : #f00;}
+            /* 
+            
+            style 우선순위
+            1. style = 'color:blue' line 34 (최후의 수단) 권장 X
+            2. .red{color : purple;} line 13 (애매함)
+            3. href ="css/example.css" 외부(관리 하기에 가장 적합) 적극 권장
+
+            */
+
+          }
+
+        </script>
+
+    </body>
+
+</html>
