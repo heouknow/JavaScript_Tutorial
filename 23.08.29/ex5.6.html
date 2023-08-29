@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="23.08.29 ex5." content="width=device-width, initial-scale=1.0">
+        <title>23.08.29 ex5.</title>
+    </head>
+    
+    <body>
+        <script>
+            function f01(n1, n2){ // n1, n2 매개변수 (지역변수에 포함)
+                var n3 = 100; //지역 변수
+                document.write("f01 n1 : ",n1,"<br>");
+                document.write("f01 n2 : ",n2,"<br>");
+                document.write("f01 n3 : ",n3,"<br>");
+                //return; // undefined
+                
+            }
+            var f01_value = f01(50,300);
+            document.write(f01_value,"<br>"); // undefined
+            
+        </script>
+    </body>
+</html>

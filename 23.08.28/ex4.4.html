@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="23.08.28 ex4.4" content="width=device-width, initial-scale=1.0">
+        <title>23.08.28 ex4.4</title>
+    </head>
+    
+    <body>
+        <script>
+          //p 99
+          /* 배열의 3가지 방식
+          
+          1. 
+          var d = new Array();
+          d[0] = 30;
+          d[1] = "따르릉";
+          d[2] = true;
+          
+          2.
+          var d = new Array(30,"따르릉",true);
+          
+          3.
+          var d =[30,"따르릉",true];
+
+          */
+          var arr = [30,"따르릉",true];
+          
+
+          document.write("<h3>배열값 가져오기-1</h3>");
+          document.write(arr[0],"<br>");
+          document.write(arr[1],"<br>");
+          document.write(arr[2],"<br>");
+
+          document.write("<h3>배열값 가져오기-2</h3>");
+          for(var i =0; i< arr.length;i++){
+            document.write(arr[i],"<br>");
+          }
+          
+          document.write("<h3>배열값 가져오기-3</h3>");
+          for(i in arr){
+            document.write(arr[i],"<br>");
+          }
+          arr.reverse();
+          document.write("<h3>배열값 가져오기-4</h3>");
+          
+          for(var i =0; i< arr.length;i++)
+          {
+            document.write(arr[i],"<br>");
+          }
+        </script>
+    </body>
+</html>

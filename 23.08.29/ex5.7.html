@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="23.08.29 ex5.7" content="width=device-width, initial-scale=1.0">
+        <title>23.08.29 ex5.7</title>
+    </head>
+    
+    <body>
+        <script>
+          
+          
+          
+          
+          /*
+          testFunc();
+          function testFunc(){
+            document.write(" testFunc 실행","<br>");
+          }
+          */
+          
+          
+          
+          /*
+          testFunc2();
+          var testFunc2 = function(){
+            document.write("testFunc2 실행");
+          }
+          
+          testFunc2();
+          실행 안됨
+          */
+
+          //p 133
+          var count = 0;
+
+          myFuc();
+
+          function myFuc(){
+            count++;
+            document.write("hello" + count,",<br>");
+
+          }
+
+          myFuc();
+
+          var theFnc = function(){
+            count++;
+            document.write("bye" + count,",<br>");
+
+          }
+
+          theFnc();
+        </script>
+    </body>
+</html>

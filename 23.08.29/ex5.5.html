@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="23.08.29 ex5.5" content="width=device-width, initial-scale=1.0">
+        <title>23.08.29 ex5.5</title>
+    </head>
+    
+    <body>
+        <script>
+            
+            function f01(){
+                document.write("f01 실행","<br>"); // 1
+                f02();
+                document.write("f01 종료","<br>"); // 6
+            }
+            function f02(){
+                document.write("f02 실행","<br>"); // 2
+                f03();
+                document.write("f02 종료","<br>"); // 5
+            }
+            function f03(){
+                document.write("f03 실행","<br>"); // 3
+                document.write("f03 종료","<br>"); // 4
+            }
+            document.write("프로그램 시작","<br>"); 
+            f01();
+            document.write("프로그램 종료","<br>");
+        </script>
+    </body>
+</html>

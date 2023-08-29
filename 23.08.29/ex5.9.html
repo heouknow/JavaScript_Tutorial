@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="23.08.29 ex5.9" content="width=device-width, initial-scale=1.0">
+        <title>23.08.29 ex5.9</title>
+    </head>
+    
+    <body>
+        <script>
+            
+          /*
+
+          function sum(n1,n2){
+            document.write(n1+n2);
+          }
+
+          sum(10,20);
+
+          */
+  
+            function sum(n1,n2){
+                var sum = 0;
+                for (i in arguments.length){
+                sum += arguments[i];
+                }
+                return;
+                document.write(sum);
+                console.dir(arguments);
+            }
+            console.dir(sum);
+            var result = sum(10,20,30,40,50);
+            document.write(result);
+            sum(10,20);
+        </script>
+    </body>
+</html>

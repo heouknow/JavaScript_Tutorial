@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="23.08.29 ex5.10" content="width=device-width, initial-scale=1.0">
+        <title>23.08.29 ex5.10</title>
+    </head>
+    
+    <body>
+        <script>
+            
+            for(var i = 2; i <10; i ++){
+                for(var j = 1; j < 10; j++){
+                    document.write(i,' x ',j,' = ', i*j,'<br>');
+                    if(i == 7 && j == 7){
+                        break;
+                    }
+                }
+                if(i == 7 && j == 7){
+                        break;
+                    }
+            }
+            
+            var flag_1 = false;
+            for(var i = 2; i <10; i ++){
+                for(var j = 1; j < 10; j++){
+                    document.write(i,' x ',j,' = ', i*j,'<br>');
+                    if(i == 7 && j == 7){
+                        flag_1 = true;
+                        break;
+                    }
+                }
+                if(flag_1){
+                        break;
+                    }
+            }
+            
+            
+            // 반복문의 흐름 제어 break , continue, return
+            function gugudan(){
+                for(var i = 2; i <10; i ++){
+                    for(var j = 1; j < 10; j++){
+                        document.write(i,' x ',j,' = ', i*j,'<br>');
+                        if(i==7 && j==7){
+                        return;
+                        }
+                    }    
+                }
+            }
+            gugudan();
+
+            
+            /*
+            for(var i = 2; i <10; i ++){
+                for(var j = 1; j < 10; j++){
+                    
+                    if(i== 7 &&j == 7){
+                        document.write(i,' x ',j,' = ', i*j,'<br>');
+                        break;
+                    }
+                }
+               
+            }
+            */
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="23.08.28 ex4.3" content="width=device-width, initial-scale=1.0">
+        <title>23.08.28 ex4.3</title>
+    </head>
+    
+    <body>
+        
+        <script>
+        //p 97
+        document.write("<h1>컴퓨터 가위, 바위, 보 맞추기</h1>");
+        document.write("<h1> 나의 팀 :</h1>");
+
+        var game = prompt("가위,바위,보 중 선택하세요?","가위");
+        var gameNum;
+        switch(game){
+            case "가위":
+                gameNum = 1; break;
+            case "바위":
+                gameNum = 2; break;
+            case "보":
+                gameNum = 3; break;
+            default: alert("잘못 작성했습니다.");
+                location.reload();
+
+        }
+        //var d =["가위","바위","보"];
+        //var e = d[gameNum];
+        if(gameNum ==1)
+        {
+            document.write("<img src =\"images/math_img_" +1+".jpg\">");  
+        }
+        else if(gameNum ==2)
+        {
+            document.write("<img src =\"images/math_img_" +2+".jpg\">");  
+        }
+        else if(gameNum ==3)
+        {
+            document.write("<img src =\"images/math_img_" +3+".jpg\">");  
+        }
+        else{
+                alert("잘못 작성했습니다.");
+                location.reload();
+        }
+        
+        if(gameNum == com){
+            document.write("<img src =\"images/game_1.jpg\">"); //성공 이미지
+          }
+            else{
+            document.write("<img src =\"images/game_2.jpg\">"); // 실패 이미지
+          }
+          
+          var com = Math.ceil(Math.random()*3);
+          // images/math_img_1.jpg 가위
+          // images/math_img_2.jpg 바위
+          // images/math_img_3.jpg 보
+          
+          //document.write("com : "+com+", human :"+gameNum+"<br>");
+          /*
+          if(gameNum == com){
+            document.write("잘 맞췄습니다!");
+          }
+          else{
+            document.write("틀렸습니다!")
+          }
+          */
+          var num = Math.random();
+          document.write("<h1> 상대 팀 :</h1>");
+          //document.write("Math.random() : " + num +"<br>");
+          //document.write("Math.random()*3 : " + num*3 +"<br>");
+          document.write("<img src =\"images/math_img_"+ com +".jpg\">");
+          
+
+        </script>
+    </body>
+</html>
