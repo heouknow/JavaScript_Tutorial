@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="23.08.30 ex6.4" content="width=device-width, initial-scale=1.0">
+        <title>23.08.30 ex6.4</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        
+    </head>
+    
+    <body>
+        <script>
+            document.write('<table class="table table-striped">');
+            document.write('<thead>');
+            document.write('<tr>');
+            document.write('<th scope="col">번호</th>');
+            document.write('<th scope="col">이름</th>');
+            document.write('<th scope="col">국어</th>');
+            document.write('<th scope="col">영어</th>');
+            document.write('<th scope="col">수학</th>');
+            document.write('<th scope="col">평균</th>');
+            document.write('</tr>');
+            document.write('</thead>');
+            document.write('<tbody>');
+            function Score(number,name,kor,eng,math){
+                this.userNumber = number;
+                this.userName = name;
+                this.userKor = kor;
+                this.userEng = eng;
+                this.userMath = math;
+                var Average = 3;
+                this.userAverage = parseInt((kor+eng+math)/Average);
+                this.getScore = function(){
+                    var str =""
+                    str += '<tr>';
+                    str += '<th scope="row">'+this.userNumber+'</th>';
+                    str += '<td>'+this.userName+'</td>';
+                    str += '<td>'+this.userKor+'</td>';
+                    str += '<td>'+this.userEng+'</td>';
+                    str += '<td>'+this.userMath+'</td>';
+                    str += '<td>'+this.userAverage+'</td>';
+                    str += '</tr>';
+                    return str;
+                }
+                
+            } 
+            var park = new Score(1,"홍길동",90,80,70);
+            var heo = new Score(2,"허윤호",70,60,30);
+            var lee = new Score(3,"이정현",85,35,70);
+            var kim = new Score(4,"김동무",70,65,90);
+            var choi = new Score(5,"최수영",50,20,30);
+            
+            var Rank = new Array;
+            Rank[0] = park.userAverage;
+            Rank[1] = heo.userAverage;
+            Rank[2] = lee.userAverage;
+            Rank[3] = kim.userAverage;
+            Rank[4] = choi.userAverage;
+            var SortRank = Rank.sort();
+            console.dir(SortRank);
+
+            document.write(park.getScore());    
+            document.write(heo.getScore());      
+            document.write(lee.getScore());    
+            document.write(kim.getScore());    
+            document.write(choi.getScore());      
+            
+            
+            document.write('</tbody>');
+            document.write('</table>');
+        </script>
+        
+            
+              
+                
+             
+            
+            
+    </body>
+</html>
