@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+        var num = 0;
+        function printStudent(){
+            var newNode = "";
+            for(var i=0; i<stu.length; i++){
+                newNode += stu[i].printInfo(i);
+                
+                
+            }
+            return newNode;
+            
+        }
+        
+        function addStudent(){
+            // 사용자가 입력한 정보
+            const name = document.getElementById('name').value;
+            const kor = document.getElementById('kor').value;
+            const eng = document.getElementById('eng').value;
+            const math = document.getElementById('math').value;
+
+            
+            // 객체에 데이터 추가
+            stu.push(new Student(name, Number(kor), Number(eng), Number(math)));
+            console.dir(stu);
+            
+            // tbody 태그안에 innerHTML 속성으로 객체 정보를 갱신
+            var tbodyTag = document.getElementsByTagName('tbody')[0];
+            tbodyTag.innerHTML = printStudent();
+           
+        }
+        // 수정 함수 생성
+        function modify(){
+            console.log('modify button');
+            console.log(typeof stu);
+            
+        }
+        // 삭제 함수 생성
+        function remove(){
+            // 객체에 데이터 추가
+             
+            
+            var n = stu.pop();
+            console.dir(n);
+            console.dir(num);
+            //stu.pop();
+            console.dir(stu);
+            // tbody 태그안에 innerHTML 속성으로 객체 정보를 갱신
+            var tbodyTag = document.getElementsByTagName('tbody')[0];
+            tbodyTag.innerHTML = printStudent();
+        }
+    </script>
+</head>
+<body style="background-color:rgb(33,37,42)">
+    <div class="input-group">
+        <span class="input-group-text">학생이름</span>
+        <input type="text" class="form-control" id="name">
+        <span class="input-group-text">국어점수</span>
+        <input type="text" class="form-control" id="kor">
+        <span class="input-group-text">영어점수</span>
+        <input type="text" class="form-control" id="eng">
+        <span class="input-group-text">수학점수</span>
+        <input type="text" class="form-control" id="math">
+        <button type="button" class="btn btn-primary" onclick="addStudent();">추가</button>
+    </div>
+    <script>
+        class Student{
+            constructor(name, kor, eng, math){
+                this.name = name;
+                this.kor = kor;
+                this.eng = eng;
+                this.math = math;
+            }
+            printInfo(num){
+                var newNode = '<tr>';
+                newNode += `<th scope="row">${num+1}</th>`;
+                newNode += getStuName`<td>${this.name}</td>`;
+                newNode += `<td>${this.kor}</td>`;
+                newNode += `<td>${this.eng}</td>`;
+                newNode += `<td>${this.math}</td>`;
+                newNode += '<td><button type="button" class="btn btn-link" onclick="modify()">수정</button></td>';
+                newNode += `<td><button type="button" class="btn btn-link" onclick="remove()">삭제</button></td>`;
+                newNode += '</tr>';
+                return newNode;
+            }
+        }
+        
+        var stu = [new Student('홍길동', 100, 90, 80), 
+                  new Student('이순신', 90, 88, 99),
+                  new Student('유관순', 92, 95, 96)];
+        function getStuName(strings, name){ // 템플릿 리터럴에서 파싱할 함수
+            if(name == '이순신'){
+                return strings[0] + name+'장군님' + strings[1];
+            }
+            return strings[0] + name+'님' + strings[1];
+        }
+
+        document.write('<table class="table table-dark table-borderless ">');
+        document.write('<thead>');
+        document.write('<tr>');
+        document.write('<th scope="col">번호</th>');
+        document.write('<th scope="col">이름</th>');
+        document.write('<th scope="col">국어</th>');
+        document.write('<th scope="col">영어</th>');
+        document.write('<th scope="col">수학</th>');
+        document.write('<th scope="col">수정</th>');
+        document.write('<th scope="col">삭제</th>');
+        document.write('</tr>');
+        document.write('</thead>');
+        document.write('<tbody>');
+        document.write(printStudent());
+        
+        document.write('</tbody>');
+        document.write('</table>');
+    </script>
+</body>
+</html>
