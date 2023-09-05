@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="23.09.04 ex9.1" content="width=device-width, initial-scale=1.0">
+    <title>23.09.04 ex9.1</title>
+</head>
+<body>
+    <script> 
+    // 객체 복사
+    /* 변수 : 크게 두가지 
+    
+        1. 값을 가지는 변수 ex) int 
+        
+        2. 주소를 가지는 변수 ex) Array 
+        
+    */  
+    /*
+    var a = 2147483647;
+    console.log(a);
+    a += 1;
+    console.log(a);  
+    
+    var n1 = 100;
+    var n2 = n1;
+    
+    var arr1 = [10,20,30,40];
+    var arr2 = arr1;    
+    console.log('n1===n2',n1===n2);
+    
+    console.log("arr1===arr2",arr1===arr2);
+    console.log("값 변경 전 ...");
+    console.log(arr1,arr2);
+    console.log(n1,n2);
+    n2  = 200;
+    console.log("값 변경 후 ...");
+    console.log(n1,n2);
+    arr2[3] = 400;
+    //얕은 복사
+    
+    console.log(arr1,arr2);
+    //객체가 참조형이기 때문
+    //깊은 복사의 두가지 상황
+    console.log("-----arr3 arr4-----");
+    var arr3 = [11,22,33];
+    var arr4 = Object.assign([],arr3);
+    console.log(arr3,arr4);
+    arr4[2] = 300;
+    console.log("-----arr4 값 변경-----");
+    console.log(arr3,arr4);
+    var arr5 =[[11,[22,33]],[44,55]];
+    console.log("arr5:" ,arr5);
+    var arr6 = Object.assign([],arr5);
+    arr6[0] = 5;
+    arr6[1] = [50];
+    console.log("arr6 :", arr6);
+    var arr7 =[[1,2,3],[4,5,6]];
+    var arr8 = [...arr7]; // spread연산자 : 얕은 복사
+    console.log("----arr7 arr8----");
+    console.log(arr7,arr8);
+    arr8[1][1] = 55;
+    console.log("----arr7 arr8----");
+    console.log(arr7,arr8);
+    */
+        var arr9 = [[100,200,300],[400,500,600]];
+        console.log("JSON.stringify(arr9)");
+        console.log(JSON.stringify(arr9));
+        console.log("JSON.parse(JSON.stringify(arr9))");
+        console.log(JSON.parse(JSON.stringify(arr9)));
+        const arr10 = JSON.parse(JSON.stringify(arr9));
+        console.log("arr9,arr10");
+        console.log(arr9,arr10);
+        arr10[1][2] = 0;
+        console.log("변경후...");
+        console.log(arr9,arr10);
+        console.log(arr9===arr10);
+        console.log(arr9[0]===arr10[0]);
+
+    </script>
+</body>
+</html>
